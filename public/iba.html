@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ibaApp">
 
 <head>
 
@@ -20,6 +20,8 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,6 +29,40 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="angular.min.js"></script>
+    <script src="angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="ui-bootstrap-tpls-2.0.2.min.js"></script>
+        <script>
+        // Send to app.js! Very dirty-looking!
+        var myApp = angular.module('ibaApp', ['ui.router']);
+        myApp.config(function($stateProvider, $urlRouterProvider) {
+            // For any unmatched url, reroute to /state1
+            $urlRouterProvider.otherwise("/home");
+            //
+            // Now set up states
+            $stateProvider
+              .state('home', {
+                url: "/home",
+                templateUrl: "iba/home.html"
+              })
+              .state('about', {
+                url: "/about",
+                templateUrl: "iba/about.html"
+              })
+              .state('members', {
+                url: "/members",
+                templateUrl: "iba/members.html"
+              })
+              .state('board', {
+                url: "/board",
+                templateUrl: "board.html"
+              })
+              .state('contact', {
+                url: "/contact",
+                templateUrl: "contact.html"
+              })
+        });
+    </script>
 
 </head>
 
@@ -51,7 +87,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Home</a>
+                        <a ui-sref="home">Home</a>
                     </li>
                     <div class="btn-group">
                       <button type="button" class="btn btn-default dropdown-toggle btn-clubs navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -68,10 +104,10 @@
                       </ul>
                     </div>
                     <li>
-                        <a href="#">About</a>
+                        <a ui-sref="about">About</a>
                     </li>
                     <li>
-                        <a href="#">Member Placements</a>
+                        <a ui-sref="members">Member Placements</a>
                     </li>
                     <li>
                         <a href="#">Applications</a>
@@ -83,95 +119,7 @@
         <!-- /.container -->
     </nav>
 
-
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>IBA</h1>
-                        <h3>Investment Banking Academy</h3>
-                        <hr class="intro-divider">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <!-- Page Content -->
-
-    <a  name="services"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Financial Education Opportunities</h2>
-                    <p class="lead">New to finance?  Master the fundamentals of accounting, corporate finance, and investing by joining the Introductory Finance Society (IFS).</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/Art/Exported/NEWNEW/NEWIFS.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Recruiting Resources</h2>
-                    <p class="lead">Interested in a career in financial services?  The Investment Banking Academy (IBA) and Sales & Trading Academy (STA) will set you on the path towards success with recruiting tips, mock interviews, and access to an active alumni network.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/Art/Exported/NEWNEW/NEWIBA.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Invest <i>Real</i> Money</h2>
-                    <p class="lead">Want to gain exposure to equity investing?  Join the Tartan Student Fund (TSF) and take a deep dive into fundamental research and valuation, helping invest $50,000 on behalf of the CMU Endowment Office.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/Art/Exported/NEWNEW/NEWTSF.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
+    <ui-view></ui-view>
 
     <div class="banner">
         <div class="container">
@@ -228,12 +176,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

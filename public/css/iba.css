@@ -206,10 +206,6 @@ p.copyright {
     margin-bottom: 50px;
 }
 
-.about {
-    margin-top: 100px;
-}
-
 .calendar {
     text-align: center;
     margin-top: 100px;
@@ -261,4 +257,9 @@ p.copyright {
 
 .why-tfg {
     margin-bottom: 50px;
+}
+
+.mission {
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
