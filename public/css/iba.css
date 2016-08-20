@@ -208,6 +208,7 @@ p.copyright {
 
 .about {
     margin-top: 100px;
+    margin-bottom: 450px;
 }
 
 .calendar {
@@ -261,4 +262,15 @@ p.copyright {
 
 .why-tfg {
     margin-bottom: 50px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
 }
