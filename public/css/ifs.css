@@ -26,7 +26,7 @@ h6 {
 }
 
 .navbar {
-    background-color: #956fd6;
+    background-color: #ffffff;
 }
 
 .navbar-fixed-top {
@@ -34,7 +34,7 @@ h6 {
 }
 
 .nav-item {
-    color: white;
+    color: black;
 }
 
 .lead {
@@ -182,9 +182,9 @@ p.copyright {
 }
 
 .btn-clubs {
-    background-color: #956fd6;
+    background-color: #ffffff;
     border: none;
-    color: white;
+    color: black;
     margin-top: 34px;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -239,7 +239,7 @@ p.copyright {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: white;
+    color: black;
     margin-top: 25px;
 }
 
