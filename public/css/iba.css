@@ -267,10 +267,24 @@ p.copyright {
 .table {
     border-collapse: collapse;
     width: 100%;
+    padding-left: 3000px;
 }
 
 td, th {
     border: 1px solid #dddddd;
     padding: 8px;
     text-align: center;
+}
+
+thead th {
+    font-style: italic;
+    font-size: 1.5em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+tbody td {
+    border-left: none;
+    border-right: none;
 }
