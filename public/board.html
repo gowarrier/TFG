@@ -28,6 +28,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
 </head>
 
 <body>
@@ -92,7 +104,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <p class="name"><a href="https://www.linkedin.com/in/huojohn">John Huo</a></p>
+                <p class="name"><a href="https://www.linkedin.com/in/huojohn" data-toggle="tooltip" data-placement="left" title="Click for LinkedIn Profile!">John Huo</a></p>
                 <img src="img/Art/tfg_board/huo.jpg" class="board">
                 <p class="title">Chairman</p>
                 <p class="org">Tepper Finance Group</p>
@@ -259,12 +271,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
