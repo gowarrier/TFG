@@ -191,10 +191,6 @@ p.copyright {
     font-weight: 700;
 }
 
-.exec-board {
-    padding-top: 50px;
-}
-
 .board {
     height: 200px;
     width: 150px;
@@ -202,7 +198,7 @@ p.copyright {
 
 .exec-board {
     text-align: center;
-    margin-top: 250px;
+    margin-top: 100px;
     margin-bottom: 250px;
 }
 
